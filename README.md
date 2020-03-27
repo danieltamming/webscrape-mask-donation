@@ -1,6 +1,6 @@
 # webscrape-mask-donation
 
-Collects the COVID-19 mask donation information aggregated on [this]('https://findthemasks.com/give.html') site. 
+Collects the COVID-19 mask donation information aggregated on [this](https://findthemasks.com/give.html) site. 
 The data is organized into a csv file with columns: 
 'State', 'City', 'Location', 'Address', 'Instructions', 'Accepting', 'Open packages?'. 
 The webpage is updated frequently (often more than once per hour), 
