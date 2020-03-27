@@ -9,9 +9,14 @@ from selenium import webdriver
 url = 'https://findthemasks.com/give.html'
 browser = webdriver.Firefox()
 browser.get(url)
-time.sleep(15)
+# increase sleep time if data is not loading
+SLEEP_TIME = 10
+time.sleep(SLEEP_TIME)
 soup = BeautifulSoup(browser.page_source, "html.parser")
 loc_list = soup.find('div', {'id': 'locations-list'})
+if not loc_list.contents:
+	raise ValueError('Webpage did not load in time. Please try again. If '
+					 'problem persists, increase the SLEEP_TIME parameter.')
 df = pd.DataFrame(columns=['State', 'City', 'Location', 'Address', 
 						   'Instructions', 'Accepting', 'Open packages?'])
 labels = ['Address', 'Instructions', 'Accepting', 'Open packages?']
