@@ -8,3 +8,8 @@ so users are encouraged to run this script often in order to keep their data up 
 
 The webpage uses JavaScript, so a Selenium webdriver is used to load the page in its entirety. 
 Please do not close the FireFox window until the program completes. 
+
+### Instructions
+1. clone the repository
+2. create a virtual environment and install all packages in requirements.txt
+3. in your command line run `python main.py`
